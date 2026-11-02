@@ -20,13 +20,13 @@ int main() {
         number /= 10; 
     } 
     // now making the logic for reversing the number 
-    int numberReversed = 0, remainder; 
-    while (digits > 0) { 
-        remainder = numberBack % 10; 
-        numberReversed += remainder * pow(10, digits - 1); 
+    int reversedNumber = 0; 
+    while (digits > 0) {
+        int lastDig = numberBack % 10;
+        reversedNumber = reversedNumber * 10 + lastDig; 
         numberBack /= 10; 
         digits--; 
     } 
-    cout<<"number reversed: "<<numberReversed<<endl; 
+    cout<<"number reversed: "<<reversedNumber<<endl; 
     return 0;
 } 
