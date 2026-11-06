@@ -6,7 +6,7 @@ using namespace std;
 // required answer 
 vector<int> twoSum(vector<int>& x, int& y) { 
     for (int i = 0; i < x.size(); i++) { 
-        for (int j = 1; j < x.size(); j++) { 
+        for (int j = i + 1; j < x.size(); j++) { 
             if (x[i] + x[j] == y) { 
                 return {i, j}; 
                 break; 
